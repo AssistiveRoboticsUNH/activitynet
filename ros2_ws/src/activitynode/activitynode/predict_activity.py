@@ -58,6 +58,7 @@ class ActivityNode(Node):
     def __init__(self):
         super().__init__('ActivityNode')
         
+        self.publisher_ = self.create_publisher(String, '/activity', 10)
         self.subscription = self.create_subscription(
             Image,
             '/image_raw',  # Replace with your actual image topic
@@ -68,6 +69,7 @@ class ActivityNode(Node):
 
         self.cv_bridge = CvBridge()
         self.queue = deque(maxlen=seq_len)
+        self.view=True
  
 
     def image_callback(self, msg):
@@ -83,7 +85,7 @@ class ActivityNode(Node):
 
         pred=-1
         if len(self.queue) == seq_len:
-            print('time to predict')
+            # print('time to predict')
             action=np.array(self.queue)
             tx=torch.from_numpy(action).float()
             tx=tx.unsqueeze(0).to(device)
@@ -91,20 +93,26 @@ class ActivityNode(Node):
             po=output.argmax(axis=1)
             pred=po[0]
 
-            print('pred=', pred)
-            #draw text on the image
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            org = (50, 50)
-            fontScale = 1
-            color = (255, 0, 0)
-            thickness = 2
-            cv_image = cv2.putText(cv_image, "pred="+str(pred), org, font,  
-                    fontScale, color, thickness, cv2.LINE_AA)
+            print('pred=', pred) 
+
+            if self.view:
+                #draw text on the image
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                org = (50, 50)
+                fontScale = 1
+                color = (255, 0, 0)
+                thickness = 2
+                cv_image = cv2.putText(cv_image, "pred="+str(pred), org, font,  
+                        fontScale, color, thickness, cv2.LINE_AA)
 
 
+        msg = String()
+        msg.data = "pred="+str(pred)
+        self.publisher_.publish(msg)
 
-        cv2.imshow('ROS2 Image Viewer', cv_image)
-        cv2.waitKey(1)
+        if self.view:
+            cv2.imshow('Activity Recognition', cv_image)
+            cv2.waitKey(1)
 
 
 def main(args=None):
