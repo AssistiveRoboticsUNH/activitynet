@@ -1,0 +1,10 @@
+clips_eating/
+eating_clips/
+data/
+non_eating_clips/
+sampleclips/
+videocliptest/
+*.txt
+*.mp4
+*.avi
+*.png
