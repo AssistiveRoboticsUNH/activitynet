@@ -1,0 +1,30 @@
+running egg_info
+writing ../../build/bc_wreg/bc_wreg.egg-info/PKG-INFO
+writing dependency_links to ../../build/bc_wreg/bc_wreg.egg-info/dependency_links.txt
+writing entry points to ../../build/bc_wreg/bc_wreg.egg-info/entry_points.txt
+writing requirements to ../../build/bc_wreg/bc_wreg.egg-info/requires.txt
+writing top-level names to ../../build/bc_wreg/bc_wreg.egg-info/top_level.txt
+reading manifest file '../../build/bc_wreg/bc_wreg.egg-info/SOURCES.txt'
+writing manifest file '../../build/bc_wreg/bc_wreg.egg-info/SOURCES.txt'
+running build
+running build_py
+copying bc_wreg/bc_inference.py -> /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+copying /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg/bc_inference.py -> /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg
+byte-compiling /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg/bc_inference.py to bc_inference.cpython-310.pyc
+  File "/home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg/bc_inference.py", line 6
+    from std_msgs.msg import 
+                             ^
+SyntaxError: invalid syntax
+
+running install_data
+running install_egg_info
+removing '/home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/bc_wreg/bc_wreg.egg-info to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing hello script to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/bc_wreg
+Installing inference script to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/bc_wreg
+writing list of installed files to '/home/ns/matlab/inference/ros2_ws/build/bc_wreg/install.log'

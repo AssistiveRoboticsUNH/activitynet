@@ -11,6 +11,9 @@ while(True):
     # Capture the video frame
     # by frame
     ret, frame = vid.read()
+
+    #flip the frame
+    frame = cv2.flip(frame, 1)
   
     # Display the resulting frame
     cv2.imshow('frame', frame)

@@ -1,0 +1,27 @@
+[0.613s] Invoking command in '/home/ns/matlab/inference/ros2_ws/src/bc_wreg': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ns/matlab/inference/ros2_ws/build/bc_wreg/prefix_override:/home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/bc_wreg build --build-base /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build install --record /home/ns/matlab/inference/ros2_ws/build/bc_wreg/install.log --single-version-externally-managed
+[0.839s] running egg_info
+[0.840s] writing ../../build/bc_wreg/bc_wreg.egg-info/PKG-INFO
+[0.840s] writing dependency_links to ../../build/bc_wreg/bc_wreg.egg-info/dependency_links.txt
+[0.840s] writing entry points to ../../build/bc_wreg/bc_wreg.egg-info/entry_points.txt
+[0.840s] writing requirements to ../../build/bc_wreg/bc_wreg.egg-info/requires.txt
+[0.840s] writing top-level names to ../../build/bc_wreg/bc_wreg.egg-info/top_level.txt
+[0.841s] reading manifest file '../../build/bc_wreg/bc_wreg.egg-info/SOURCES.txt'
+[0.842s] writing manifest file '../../build/bc_wreg/bc_wreg.egg-info/SOURCES.txt'
+[0.842s] running build
+[0.842s] running build_py
+[0.842s] copying bc_wreg/bc_inference.py -> /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg
+[0.843s] running install
+[0.843s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.843s]   warnings.warn(
+[0.843s] running install_lib
+[0.844s] copying /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg/bc_inference.py -> /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg
+[0.844s] byte-compiling /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg/bc_inference.py to bc_inference.cpython-310.pyc
+[0.845s] running install_data
+[0.845s] running install_egg_info
+[0.846s] removing '/home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.847s] Copying ../../build/bc_wreg/bc_wreg.egg-info to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg-0.0.0-py3.10.egg-info
+[0.847s] running install_scripts
+[0.864s] Installing hello script to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/bc_wreg
+[0.864s] Installing inference script to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/bc_wreg
+[0.864s] writing list of installed files to '/home/ns/matlab/inference/ros2_ws/build/bc_wreg/install.log'
+[0.882s] Invoked command in '/home/ns/matlab/inference/ros2_ws/src/bc_wreg' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/ns/matlab/inference/ros2_ws/build/bc_wreg/prefix_override:/home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/bc_wreg build --build-base /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build install --record /home/ns/matlab/inference/ros2_ws/build/bc_wreg/install.log --single-version-externally-managed

@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/bc_wreg/bc_wreg.egg-info
+writing ../../build/bc_wreg/bc_wreg.egg-info/PKG-INFO
+writing dependency_links to ../../build/bc_wreg/bc_wreg.egg-info/dependency_links.txt
+writing entry points to ../../build/bc_wreg/bc_wreg.egg-info/entry_points.txt
+writing requirements to ../../build/bc_wreg/bc_wreg.egg-info/requires.txt
+writing top-level names to ../../build/bc_wreg/bc_wreg.egg-info/top_level.txt
+writing manifest file '../../build/bc_wreg/bc_wreg.egg-info/SOURCES.txt'
+reading manifest file '../../build/bc_wreg/bc_wreg.egg-info/SOURCES.txt'
+writing manifest file '../../build/bc_wreg/bc_wreg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build
+creating /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib
+creating /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg
+copying bc_wreg/__init__.py -> /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg
+copying bc_wreg/hello_pub.py -> /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg
+running install
+running install_lib
+creating /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg
+copying /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg/__init__.py -> /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg
+copying /home/ns/matlab/inference/ros2_ws/build/bc_wreg/build/lib/bc_wreg/hello_pub.py -> /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg
+byte-compiling /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg/hello_pub.py to hello_pub.cpython-310.pyc
+running install_data
+creating /home/ns/matlab/inference/ros2_ws/install/bc_wreg/share/ament_index
+creating /home/ns/matlab/inference/ros2_ws/install/bc_wreg/share/ament_index/resource_index
+creating /home/ns/matlab/inference/ros2_ws/install/bc_wreg/share/ament_index/resource_index/packages
+copying resource/bc_wreg -> /home/ns/matlab/inference/ros2_ws/install/bc_wreg/share/ament_index/resource_index/packages
+copying package.xml -> /home/ns/matlab/inference/ros2_ws/install/bc_wreg/share/bc_wreg
+running install_egg_info
+Copying ../../build/bc_wreg/bc_wreg.egg-info to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/python3.10/site-packages/bc_wreg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing hello script to /home/ns/matlab/inference/ros2_ws/install/bc_wreg/lib/bc_wreg
+writing list of installed files to '/home/ns/matlab/inference/ros2_ws/build/bc_wreg/install.log'

@@ -1,0 +1,8 @@
+[console_scripts]
+bc_live_inference = bc_wreg.bc_live_inference:main
+bc_lstm_live_inference = bc_wreg.bc_lstm_live_inference:main
+bc_lstm_offline_inference = bc_wreg.bc_lstm_offline_inference:main
+bc_offline_inference = bc_wreg.bc_offline_inference:main
+bc_offline_org = bc_wreg.bc_offline_org:main
+hello = bc_wreg.hello_pub:main
+
