@@ -88,7 +88,7 @@ def processdir(dir):
         eating_data.append(r)
 
 
-def processinput(filename, dir, t_model):
+def processinput(filename, dir, t_model_path):
     global model
     if filename is not None: 
         if (os.path.isfile(filename)):
@@ -101,9 +101,11 @@ def processinput(filename, dir, t_model):
                 dir = dir + '/'
             processdir(dir)
         else: return -1
-    if t_model is not None:
-        if os.path.isfile(t_model):
-            model = torch.load(t_model)
+    if t_model_path is not None:
+        if os.path.isfile(t_model_path):
+            checkpoint = torch.load(t_model_path)
+            model = createmodel()
+            model.load_state_dict(checkpoint)
         else: return -1
     else: model = createmodel()
     return 0
