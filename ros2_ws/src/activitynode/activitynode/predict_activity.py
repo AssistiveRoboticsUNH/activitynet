@@ -33,7 +33,9 @@ seq_len = 30
 model = LSTM(n_joints,n_hidden,n_categories,n_layer, seq_len).to(device)
 
 
-model.load_state_dict(torch.load('rnn_train_1_dec7.pth'))
+# model.load_state_dict(torch.load('rnn_train_1_dec7.pth'))
+model.load_state_dict(torch.load('model_train_1_dec27.pth'))
+
 model.eval()
 
 
