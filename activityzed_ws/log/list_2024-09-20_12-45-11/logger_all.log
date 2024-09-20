@@ -1,0 +1,190 @@
+[0.144s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/ns/activitynet/activityzed_ws']
+[0.144s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/ns/activitynet/activityzed_ws'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], topological_order=False, names_only=False, paths_only=True, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7794e178c1c0>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7794e174b340>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7794e174b340>>)
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.192s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ns/activitynet/activityzed_ws'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'ignore'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'ignore_ament_install'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extensions ['colcon_pkg']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'colcon_pkg'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extensions ['colcon_meta']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'colcon_meta'
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extensions ['ros']
+[0.193s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'ros'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extensions ['cmake', 'python']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'cmake'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'python'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extensions ['python_setup_py']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws) by extension 'python_setup_py'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extensions ['ignore', 'ignore_ament_install']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'ignore'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'ignore_ament_install'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extensions ['colcon_pkg']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'colcon_pkg'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extensions ['colcon_meta']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'colcon_meta'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extensions ['ros']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'ros'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extensions ['cmake', 'python']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'cmake'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'python'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extensions ['python_setup_py']
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps) by extension 'python_setup_py'
+[0.214s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extensions ['ignore', 'ignore_ament_install']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'ignore'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'ignore_ament_install'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extensions ['colcon_pkg']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'colcon_pkg'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extensions ['colcon_meta']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'colcon_meta'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extensions ['ros']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'ros'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extensions ['cmake', 'python']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'cmake'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'python'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extensions ['python_setup_py']
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented) by extension 'python_setup_py'
+[0.215s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extensions ['ignore', 'ignore_ament_install']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'ignore'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'ignore_ament_install'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extensions ['colcon_pkg']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'colcon_pkg'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extensions ['colcon_meta']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'colcon_meta'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extensions ['ros']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'ros'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extensions ['cmake', 'python']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'cmake'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'python'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extensions ['python_setup_py']
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/eating) by extension 'python_setup_py'
+[0.216s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'ignore'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'ignore_ament_install'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extensions ['colcon_pkg']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'colcon_pkg'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extensions ['colcon_meta']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'colcon_meta'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extensions ['ros']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'ros'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extensions ['cmake', 'python']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'cmake'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'python'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extensions ['python_setup_py']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented/noneating) by extension 'python_setup_py'
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extensions ['ignore', 'ignore_ament_install']
+[0.217s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'ignore_ament_install'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extensions ['colcon_pkg']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'colcon_pkg'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extensions ['colcon_meta']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'colcon_meta'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extensions ['ros']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'ros'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extensions ['cmake', 'python']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'cmake'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'python'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extensions ['python_setup_py']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14) by extension 'python_setup_py'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extensions ['ignore', 'ignore_ament_install']
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'ignore'
+[0.218s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extensions ['colcon_pkg']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'colcon_pkg'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extensions ['colcon_meta']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'colcon_meta'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extensions ['ros']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'ros'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extensions ['cmake', 'python']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'cmake'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'python'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extensions ['python_setup_py']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/eating) by extension 'python_setup_py'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extensions ['ignore', 'ignore_ament_install']
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'ignore'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'ignore_ament_install'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extensions ['colcon_pkg']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'colcon_pkg'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extensions ['colcon_meta']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'colcon_meta'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extensions ['ros']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'ros'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'cmake'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'python'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extensions ['python_setup_py']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/kps/segmented_14/noneating) by extension 'python_setup_py'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/log) by extension 'ignore'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/log) ignored
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'ignore_ament_install'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extensions ['colcon_pkg']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'colcon_pkg'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extensions ['colcon_meta']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'colcon_meta'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extensions ['ros']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'ros'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extensions ['cmake', 'python']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'cmake'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'python'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extensions ['python_setup_py']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/models) by extension 'python_setup_py'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'ignore_ament_install'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extensions ['colcon_pkg']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'colcon_pkg'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extensions ['colcon_meta']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'colcon_meta'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extensions ['ros']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'ros'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extensions ['cmake', 'python']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'cmake'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'python'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extensions ['python_setup_py']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src) by extension 'python_setup_py'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extension 'ignore'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extension 'colcon_pkg'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/src/activity_zed) by extension 'ros'
+[0.226s] DEBUG:colcon.colcon_core.package_identification:Package '/home/ns/activitynet/activityzed_ws/src/activity_zed' with type 'ros.ament_python' and name 'activity_zed'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'ignore_ament_install'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extensions ['colcon_pkg']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'ros'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extensions ['cmake', 'python']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'cmake'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'python'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extensions ['python_setup_py']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos) by extension 'python_setup_py'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'ros'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extensions ['cmake', 'python']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'cmake'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'python'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extensions ['python_setup_py']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(/home/ns/activitynet/activityzed_ws/videos/09_20_2024_12_02) by extension 'python_setup_py'
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
