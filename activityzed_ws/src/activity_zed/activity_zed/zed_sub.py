@@ -20,12 +20,13 @@ class ZedSub(Node):
         topic_name_image='/zed_kitchen/zed_node_kitchen/left/image_rect_color'
         topic_name_skeleton='/zed_kitchen/zed_node_kitchen/body_trk/skeletons'
         
-        print('Subscribing to: ',topic_name_image)
-        print('Subscribing to: ',topic_name_skeleton)
         
         # topic_name_image='/zed_doorway/zed_node_doorway/left/image_rect_color'
         # topic_name_skeleton='/zed_doorway/zed_node_doorway/body_trk/skeletons'
         
+        print('Subscribing to: ',topic_name_image)
+        print('Subscribing to: ',topic_name_skeleton)
+
 
         self.subscription = self.create_subscription(
             Image,
