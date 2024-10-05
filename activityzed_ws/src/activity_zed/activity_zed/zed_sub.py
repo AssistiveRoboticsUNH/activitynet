@@ -9,6 +9,9 @@ import rclpy
 from rclpy.node import Node
 import imageio 
 import datetime 
+import getpass
+
+
 
 class ZedSub(Node):
 
@@ -45,7 +48,13 @@ class ZedSub(Node):
 
         now = datetime.datetime.now()
         time_str=now.strftime("%m_%d_%Y_%H_%M")
-        self.savedir="/home/ns/activitynet_ws/videos/"+time_str+"/"
+        
+        
+        # Get the current username
+        username = getpass.getuser()
+
+        self.savedir=f"/home/{username}/activitynet_ws/videos/{time_str}/"
+        
         if not os.path.exists(self.savedir):
             os.makedirs(self.savedir)
         
