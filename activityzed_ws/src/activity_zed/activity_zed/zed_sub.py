@@ -14,15 +14,25 @@ class ZedSub(Node):
 
     def __init__(self):
         super().__init__('zed_sub')
+        topic_name_image='/zed_kitchen/zed_node_kitchen/left/image_rect_color'
+        topic_name_skeleton='/zed_kitchen/zed_node_kitchen/body_trk/skeletons'
+        
+        print('Subscribing to: ',topic_name_image)
+        print('Subscribing to: ',topic_name_skeleton)
+        
+        # topic_name_image='/zed_doorway/zed_node_doorway/left/image_rect_color'
+        # topic_name_skeleton='/zed_doorway/zed_node_doorway/body_trk/skeletons'
+        
+
         self.subscription = self.create_subscription(
             Image,
-            '/zed_doorway/zed_node_doorway/left/image_rect_color',
+            topic_name_image,
             self.image_callback,
             10)
         
         self.sub_skeleton = self.create_subscription(
             ObjectsStamped,
-            '/zed_doorway/zed_node_doorway/body_trk/skeletons',
+            topic_name_skeleton,
             self.skeleton_callback,
             10)
 
@@ -35,7 +45,7 @@ class ZedSub(Node):
 
         now = datetime.datetime.now()
         time_str=now.strftime("%m_%d_%Y_%H_%M")
-        self.savedir="~/activitynet_ws/videos/"+time_str+"/"
+        self.savedir="/home/ns/activitynet_ws/videos/"+time_str+"/"
         if not os.path.exists(self.savedir):
             os.makedirs(self.savedir)
         
