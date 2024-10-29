@@ -14,6 +14,7 @@ import argparse
 import subprocess
 import threading
 import time 
+import yaml 
 
 def get_is_rosbag_running_via_cli():
     result = subprocess.run(["ros2", "node", "list"], capture_output=True, text=True)
@@ -27,23 +28,69 @@ def get_is_rosbag_running_via_cli():
                 return True
     return False
 
+
+def list_topics(metadata_path): 
+    metadata= yaml.load(open(metadata_path, 'r'), Loader=yaml.FullLoader)
+
+    topics={}
+    topic_metadatas=metadata['rosbag2_bagfile_information']['topics_with_message_count']
+    for topic_metadata in topic_metadatas:
+        topic_name=topic_metadata['topic_metadata']['name']
+        message_count=topic_metadata['message_count']
+        topics[topic_name]=message_count
+        
+    return topics
+
+
+
+def play_ros2_bag(bag_file_path, loop=False):
+    # Prepare the ros2 bag play command
+    command = ["ros2", "bag", "play", bag_file_path]
+    if loop:
+        command.append("--loop")
+
+    try:
+        # Start playing the bag file
+        print(f"Playing ROS 2 bag file: {bag_file_path}")
+        process = subprocess.Popen(command)
+        
+        # Wait for the process to complete (or terminate it programmatically if desired)
+        process.wait()
+
+    except KeyboardInterrupt:
+        print("Interrupted, stopping playback.")
+        process.terminate()
+        process.wait()  # Ensure the process ends
+
 class ZedSub(Node):
 
-    def __init__(self, view=False):
+    def __init__(self, view=False, rosbag_path=None):
         super().__init__('zed_sub')
-        topic_name_image='/zed_kitchen/zed_node_kitchen/left/image_rect_color'
-        topic_name_skeleton='/zed_kitchen/zed_node_kitchen/body_trk/skeletons'
-        
-        topic_name_image='/zed_doorway/zed_node_doorway/left/image_rect_color'
-        topic_name_skeleton='/zed_doorway/zed_node_doorway/body_trk/skeletons'
-        
-        topic_name_image='/zed_data_recording/zed_data_recording/left/image_rect_color'
-        topic_name_skeleton='/zed_data_recording/zed_data_recording/body_trk/skeletons'
         
         topic_name_image='/zed_data_recording/zed_node_data_recording/left/image_rect_color'
         topic_name_skeleton='/zed_data_recording/zed_node_data_recording/body_trk/skeletons'
         
+        number_of_frames = -1
+        if rosbag_path is not None:
+            metadata_path= os.path.join(rosbag_path, 'metadata.yaml')
+            topics=list_topics(metadata_path)
+            topic_name_image= [name for name in topics.keys() if 'image' in name][0]
+            topic_name_skeleton= [name for name in topics.keys() if 'skeleton' in name][0]
+            number_of_frames=topics[topic_name_image]
+            
+            print('Playing rosbag in a new thread')
+            threading.Thread(target=play_ros2_bag, args=(rosbag_path,)).start()
+            print('Waiting for rosbag to start')
+            time.sleep(5)
+            
+            
+            
+            
+        print('Number of frames: ',number_of_frames)
+        print('Image topic: ',topic_name_image)
+        print('Skeleton topic: ',topic_name_skeleton)
         
+            
         
         self.isview=view
         
@@ -79,10 +126,15 @@ class ZedSub(Node):
 
         self.savedir=f"/home/{username}/activitynet/videos/{time_str}/"
         
+        if rosbag_path is not None:
+            self.savedir=rosbag_path
+            fn='_'.join( rosbag_path.split("/")[-4:] )
+            self.savedir = os.path.join(self.savedir, fn)
+            
         if not os.path.exists(self.savedir):
             os.makedirs(self.savedir)
         
-        video_path=self.savedir+'zed.mp4'
+        video_path=os.path.join(self.savedir, 'zed.mp4')
         print('saving to: ',video_path)
         self.video_writer = imageio.get_writer(video_path, fps=5)
         self.si=0
@@ -177,13 +229,16 @@ class ZedSub(Node):
 
     def close(self):
         print('Closing')
-        with open(self.savedir+'p2s.txt', 'w') as f:
+        with open(os.path.join(self.savedir, 'p2s.txt'), 'w') as f:
             for item in self.p2ss:
                 f.write("%s\n" % item)
-        with open(self.savedir+'p3s.txt', 'w') as f:
+        with open(os.path.join(self.savedir, 'p3s.txt'), 'w') as f:
             for item in self.p3ss:
                 f.write("%s\n" % item)
 
+        with open(os.path.join(self.savedir, 'segments.txt'), 'w') as f:
+            f.write('start,end,label\n') 
+            
         self.video_writer.close()
         print('Video and 2D,3D keypoints saved')
 
@@ -210,7 +265,7 @@ def check_rosbag2(node):
 def main(args=None):
     rclpy.init(args=None)
 
-    node = ZedSub(args.view)
+    node = ZedSub(args.view, args.rosbag_path)
     threading.Thread(target=check_rosbag2, args=(node,)).start()
     
 
@@ -231,6 +286,14 @@ def main(args=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Zed Sub')
     parser.add_argument('--view', action='store_true', help='View the images')
+    parser.add_argument('--rosbag_path', type=str, help='Path to the rosbag directory')
     args = parser.parse_args()
     main(args)
+
+
+# python3 zed_sub.py --rosbag_path /media/ns/Seagate/oct18/lauren/cam1/rosbag2_lauren/rosbag2_lauren
+
+
+# python3 zed_sub.py --rosbag_path  /media/ns/Seagate/oct18/ashley/cam1/rosbag2_ashley/rosbag2_ashley
+# python3 zed_sub.py --rosbag_path  /media/ns/Seagate/oct18/ashley/cam1/rosbag2_ashley_1/rosbag2_ashley_1
 
