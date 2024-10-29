@@ -10,18 +10,42 @@ from rclpy.node import Node
 import imageio 
 import datetime 
 import getpass
+import argparse
+import subprocess
+import threading
+import time 
 
-
+def get_is_rosbag_running_via_cli():
+    result = subprocess.run(["ros2", "node", "list"], capture_output=True, text=True)
+    if result.returncode == 0:
+        active_nodes = result.stdout 
+        # print("Active nodes:")
+        # for name, namespace in active_nodes:
+        #     print(f"{namespace}/{name}")
+            
+        if "rosbag2_player" in active_nodes:
+                return True
+    return False
 
 class ZedSub(Node):
 
-    def __init__(self):
+    def __init__(self, view=False):
         super().__init__('zed_sub')
         topic_name_image='/zed_kitchen/zed_node_kitchen/left/image_rect_color'
         topic_name_skeleton='/zed_kitchen/zed_node_kitchen/body_trk/skeletons'
         
-        #topic_name_image='/zed_doorway/zed_node_doorway/left/image_rect_color'
-        #topic_name_skeleton='/zed_doorway/zed_node_doorway/body_trk/skeletons'
+        topic_name_image='/zed_doorway/zed_node_doorway/left/image_rect_color'
+        topic_name_skeleton='/zed_doorway/zed_node_doorway/body_trk/skeletons'
+        
+        topic_name_image='/zed_data_recording/zed_data_recording/left/image_rect_color'
+        topic_name_skeleton='/zed_data_recording/zed_data_recording/body_trk/skeletons'
+        
+        topic_name_image='/zed_data_recording/zed_node_data_recording/left/image_rect_color'
+        topic_name_skeleton='/zed_data_recording/zed_node_data_recording/body_trk/skeletons'
+        
+        
+        
+        self.isview=view
         
         print('Subscribing to: ',topic_name_image)
         print('Subscribing to: ',topic_name_skeleton)
@@ -53,7 +77,7 @@ class ZedSub(Node):
         # Get the current username
         username = getpass.getuser()
 
-        self.savedir=f"/home/{username}/activitynet_ws/videos/{time_str}/"
+        self.savedir=f"/home/{username}/activitynet/videos/{time_str}/"
         
         if not os.path.exists(self.savedir):
             os.makedirs(self.savedir)
@@ -94,6 +118,9 @@ class ZedSub(Node):
             return
  
         self.si+=1
+        if self.si<5:
+            print('(check_5): image frame received: ',self.si)
+        
         self.cv2_image = self.bridge.imgmsg_to_cv2(image_msg,
                                                     desired_encoding='passthrough')  # Preserve original encoding
         # bgr_img = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
@@ -140,10 +167,12 @@ class ZedSub(Node):
 
         bgr_img = cv2.cvtColor(self.cv2_image, cv2.COLOR_RGB2BGR)
         self.video_writer.append_data(bgr_img)
-        cv2.imshow('topic_image',self.cv2_image)
-        if cv2.waitKey(1) == 27: 
-            self.close() 
-            print('UI closed')
+        
+        if self.isview:
+            cv2.imshow('topic_image',self.cv2_image)
+            if cv2.waitKey(1) == 27: 
+                self.close() 
+                print('UI closed')
  
 
     def close(self):
@@ -161,24 +190,47 @@ class ZedSub(Node):
         cv2.destroyAllWindows()
 
 
-def main(args=None):
-    rclpy.init(args=args)
+def check_rosbag2(node):
+    while True:
+        is_running=get_is_rosbag_running_via_cli()
+        # print('Is rosbag2 running: ',is_running)
+        time.sleep(1)
+        if not is_running:
+            node.close()
+            print('----------node closed-----------')
+            time.sleep(2)
+            try:
+                node.destroy_node() 
+            except:
+                pass 
+            rclpy.shutdown()
+            print('----------rclpy shutdown-----------')
+            break
 
-    node = ZedSub()
+def main(args=None):
+    rclpy.init(args=None)
+
+    node = ZedSub(args.view)
+    threading.Thread(target=check_rosbag2, args=(node,)).start()
+    
 
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         print('KeyboardInterrupt')
 
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
-    node.close()
-    node.destroy_node()
-    rclpy.shutdown()
+    finally:
+        # Destroy the node explicitly
+        # (optional - otherwise it will be done automatically
+        # when the garbage collector destroys the node object)
+        node.close()
+        node.destroy_node()
+        # rclpy.shutdown()
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description='Zed Sub')
+    parser.add_argument('--view', action='store_true', help='View the images')
+    args = parser.parse_args()
+    main(args)
 
